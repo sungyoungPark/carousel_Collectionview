@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		5BD35C44273F9B370059C9F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BD35C42273F9B370059C9F3 /* Main.storyboard */; };
 		5BD35C46273F9B3A0059C9F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BD35C45273F9B3A0059C9F3 /* Assets.xcassets */; };
 		5BD35C49273F9B3A0059C9F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BD35C47273F9B3A0059C9F3 /* LaunchScreen.storyboard */; };
+		5BD35C55273FA1F10059C9F3 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD35C54273FA1F10059C9F3 /* CollectionViewCell.swift */; };
+		D38F4C3DEC0EAB2B871A48A7 /* Pods_carousel_Collectionview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCDB06A3C1A8A43758760192 /* Pods_carousel_Collectionview.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		5BD35C45273F9B3A0059C9F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BD35C48273F9B3A0059C9F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BD35C4A273F9B3A0059C9F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BD35C54273FA1F10059C9F3 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		60ED8DA2E13CBEA36655F237 /* Pods-carousel_Collectionview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carousel_Collectionview.debug.xcconfig"; path = "Target Support Files/Pods-carousel_Collectionview/Pods-carousel_Collectionview.debug.xcconfig"; sourceTree = "<group>"; };
+		BCDB06A3C1A8A43758760192 /* Pods_carousel_Collectionview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_carousel_Collectionview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E03550D27CFDBEE5321C635F /* Pods-carousel_Collectionview.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carousel_Collectionview.release.xcconfig"; path = "Target Support Files/Pods-carousel_Collectionview/Pods-carousel_Collectionview.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D38F4C3DEC0EAB2B871A48A7 /* Pods_carousel_Collectionview.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D0B7E6CC3CB2C9D31DB462E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BCDB06A3C1A8A43758760192 /* Pods_carousel_Collectionview.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5BD35C30273F9B370059C9F3 = {
 			isa = PBXGroup;
 			children = (
 				5BD35C3B273F9B370059C9F3 /* carousel_Collectionview */,
 				5BD35C3A273F9B370059C9F3 /* Products */,
+				9DD68FAA58C5F2EAA0D26C70 /* Pods */,
+				3D0B7E6CC3CB2C9D31DB462E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +76,22 @@
 				5BD35C3C273F9B370059C9F3 /* AppDelegate.swift */,
 				5BD35C3E273F9B370059C9F3 /* SceneDelegate.swift */,
 				5BD35C40273F9B370059C9F3 /* ViewController.swift */,
+				5BD35C54273FA1F10059C9F3 /* CollectionViewCell.swift */,
 				5BD35C42273F9B370059C9F3 /* Main.storyboard */,
 				5BD35C45273F9B3A0059C9F3 /* Assets.xcassets */,
 				5BD35C47273F9B3A0059C9F3 /* LaunchScreen.storyboard */,
 				5BD35C4A273F9B3A0059C9F3 /* Info.plist */,
 			);
 			path = carousel_Collectionview;
+			sourceTree = "<group>";
+		};
+		9DD68FAA58C5F2EAA0D26C70 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				60ED8DA2E13CBEA36655F237 /* Pods-carousel_Collectionview.debug.xcconfig */,
+				E03550D27CFDBEE5321C635F /* Pods-carousel_Collectionview.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BD35C4D273F9B3A0059C9F3 /* Build configuration list for PBXNativeTarget "carousel_Collectionview" */;
 			buildPhases = (
+				0A72F001E5EDC53A3D3B4BFB /* [CP] Check Pods Manifest.lock */,
 				5BD35C35273F9B370059C9F3 /* Sources */,
 				5BD35C36273F9B370059C9F3 /* Frameworks */,
 				5BD35C37273F9B370059C9F3 /* Resources */,
+				8FCC234D6F615734C6FF7960 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +161,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0A72F001E5EDC53A3D3B4BFB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-carousel_Collectionview-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FCC234D6F615734C6FF7960 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-carousel_Collectionview/Pods-carousel_Collectionview-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-carousel_Collectionview/Pods-carousel_Collectionview-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-carousel_Collectionview/Pods-carousel_Collectionview-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5BD35C35273F9B370059C9F3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -139,6 +210,7 @@
 			files = (
 				5BD35C41273F9B370059C9F3 /* ViewController.swift in Sources */,
 				5BD35C3D273F9B370059C9F3 /* AppDelegate.swift in Sources */,
+				5BD35C55273FA1F10059C9F3 /* CollectionViewCell.swift in Sources */,
 				5BD35C3F273F9B370059C9F3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +355,7 @@
 		};
 		5BD35C4E273F9B3A0059C9F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60ED8DA2E13CBEA36655F237 /* Pods-carousel_Collectionview.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +375,7 @@
 		};
 		5BD35C4F273F9B3A0059C9F3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E03550D27CFDBEE5321C635F /* Pods-carousel_Collectionview.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
