@@ -16,7 +16,7 @@ class ViewController: UIViewController {
 //    var images: [String] = Bundle.main.paths(forResourcesOfType: "png", inDirectory: "Images")
 
     var images : [UIColor] = [.red,.yellow,.blue,.green,.orange]
-    
+    var names  = ["red","yellow","blue","green","orange"]
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -45,6 +45,7 @@ class ViewController: UIViewController {
         }
         //swap(&images[startIndex], &images[endIndex])
         images.swapAt(startIndex, endIndex)
+        names.swapAt(startIndex, endIndex)
         
         reversePhotoArray( startIndex: startIndex + 1, endIndex: endIndex - 1)
     }
@@ -83,8 +84,7 @@ extension ViewController:UICollectionViewDataSource,UICollectionViewDelegate, UI
 
     
     //원래는  scrollViewDidEndDecelerating 이거 였는데 초기에 뒤로가기가 안돼서 추가하였음
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         // Calculate where the collection view should be at the right-hand end item
         let fullyScrolledContentOffset:CGFloat = collectionView.frame.size.width * CGFloat(images.count - 1)
         if (scrollView.contentOffset.x >= fullyScrolledContentOffset) {
@@ -109,10 +109,19 @@ extension ViewController:UICollectionViewDataSource,UICollectionViewDelegate, UI
                 collectionView.scrollToItem(at: indexPath, at: .left, animated: false)
             }
         }
+        print("end == ", names)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 414, height: 300)
+        let width = self.view.frame.width
+        return CGSize(width: width, height: 300)
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
 }
